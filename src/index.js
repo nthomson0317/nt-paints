@@ -1,17 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
+import ReactDOM from 'react-dom';
 import App from './App';
-import { BrowserRouter } from 'react-router-dom'
-// REDUX CODE
-// import { createStore, combineReducers } from 'redux'
-// import { Provider } from 'react-redux'
+// Add imports for ReactRouterDOM
+import { 
+  BrowserRouter as Router
+} from 'react-router-dom';
+// // REDUX CODE
+// // import { createStore, combineReducers } from 'redux'
+// // import { Provider } from 'react-redux'
 
-ReactDOM.render(
-  <BrowserRouter>
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-  </BrowserRouter>
+ReactDOM.render((
+  <Router>
+      <App />
+  </Router>),
+  document.getElementById('root')
 );
-

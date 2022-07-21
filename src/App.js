@@ -1,31 +1,35 @@
 import './App.css';
 //COMPONENTS
-import Home from './components/Home'
 import About from './components/About'
+import Navbar from './components/Navbar'
+import Home from './components/Home'
 //REACT ROUTER
 import { Route, Routes, withRouter, Redirect} from 'react-router-dom'
 
-const renderAbout = () => {
-  return (
-    <About></About>
-  )
-}
+//create basic templates for routes
 
 const renderHome = (routerProps) => {
-  return <Home 
-
-  />
+  return <Home />
 }
+
 function App() {
+  console.log('app.js')
   return (
     <div>
+        <Navbar/>
+        <Routes>
+        <Route exact path="/" element={<Home />} />
+        </Routes>
 
-      <Routes>
-      <Route path="/about" render={renderAbout} />
-      <Route exact path="/" render={renderHome} />
-      </Routes>
       </div>
   );
 }
 // element={<About />}
 export default App;
+
+
+
+      {/* <Routes>
+      <Route path="/about" render={renderAbout} />
+      <Route exact path="/" render={renderHome} />
+      </Routes> */}
