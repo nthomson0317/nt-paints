@@ -4,7 +4,7 @@ import About from './components/About'
 import Navbar from './components/Navbar'
 import Home from './components/Home'
 //REACT ROUTER
-import { Route, Routes, withRouter, Redirect} from 'react-router-dom'
+import { Route, Switch, withRouter, Redirect} from 'react-router-dom'
 
 //create basic templates for routes
 
@@ -12,15 +12,16 @@ import { Route, Routes, withRouter, Redirect} from 'react-router-dom'
 //   return <Home />
 // }
 
-function App() {
+function App(props) {
   console.log('app.js')
   return (
     <div>
-        <Navbar/>
-        <Routes>
-        <Route exact path="/" element={<Home />} />
+        <Navbar
+        history={props.history}/>
+        <Switch>
         <Route exact path="/about" element={<About />} />
-        </Routes>
+        <Route exact path="/" element={<Home />} />
+        </Switch>
 
       </div>
   );
