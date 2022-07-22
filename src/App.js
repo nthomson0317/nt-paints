@@ -8,9 +8,9 @@ import { Route, Routes, withRouter, Redirect} from 'react-router-dom'
 
 //create basic templates for routes
 
-const renderHome = (routerProps) => {
-  return <Home />
-}
+// const renderHome = (routerProps) => {
+//   return <Home />
+// }
 
 function App() {
   console.log('app.js')
@@ -19,6 +19,7 @@ function App() {
         <Navbar/>
         <Routes>
         <Route exact path="/" element={<Home />} />
+        <Route exact path="/about" element={<About />} />
         </Routes>
 
       </div>
