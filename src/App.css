@@ -1,0 +1,11 @@
+:root {  
+  --timberwolf: #D7D0C8;  
+  --bone: #C8C6AF;  
+  --laurel: #95A78D;  
+  --rosy: #BD897E;  
+  --bittersweet: #F87666;  
+}
+
+.app {
+  background-color: var(--timberwolf)
+}

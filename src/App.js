@@ -3,6 +3,7 @@ import './App.css';
 import About from './components/About'
 import Navbar from './components/Navbar'
 import Home from './components/Home'
+import Paintings from './components/Paintings'
 //REACT ROUTER
 import { Route, Routes, withRouter, Redirect} from 'react-router-dom'
 
@@ -12,23 +13,24 @@ import { Route, Routes, withRouter, Redirect} from 'react-router-dom'
 
 function App(props) {
 
-  let renderHome = (routerProps) => {
-    return 
-      <Home />
+  // let renderHome = (routerProps) => {
+  //   return 
+  //     <Home />
       
-  }
+  // }
 
-  let renderAbout = () => {
-    return
-    < About />
-  }
+  // let renderAbout = () => {
+  //   return
+  //   < About />
+  // }
   console.log('app.js')
   return (
-    <div>
+    <div className="app">
         <Navbar
         history={props.history}/>
         <Routes>
         <Route path="/about" element={<About />} />
+        <Route path="/paintings" element={<Paintings />} />
         <Route exact path="/" element={<Home />} />
         </Routes>
 
